@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Book's Info";
+}
+@model TravelLibrary.Models.Response.BookResponseModel;
+
+<form>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="isbn">ISBN</label>
+            <input type="text" class="form-control" id="isbn" asp-for="Isbn" readonly>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="titulo">Titulo</label>
+            <input type="text" class="form-control" asp-for="Titlle" id="titulo" readonly>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="editorial">Editorial</label>
+        <input type="text" class="form-control" id="editorial" asp-for="EditorialName" readonly>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="autorInfo">Nombre del autor</label>
+            <input type="text" class="form-control" id="autorInfo" asp-for="AuthorInfo" readonly>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="numpages">Numero de paginas</label>
+            <input type="text" class="form-control" id="numpages" asp-for="NumPages" readonly>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="sipnosis">Sipnosis</label>
+        <textarea class="form-control" id="sipnosis" rows="6" readonly asp-for="Sypnosis"></textarea>
+    </div>
+
+    <a class="btn btn-primary" asp-controller="Home" asp-action="Index" role="button">Atras</a>
+
+</form>
